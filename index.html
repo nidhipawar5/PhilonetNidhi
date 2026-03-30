@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <title>Project Pages</title>
@@ -33,14 +33,14 @@
 <body>
 
   <!-- NAVBAR -->
-  <div class="navbar">
+  <!-- <div class="navbar">
     <button onclick="loadPage('nidhiphilonet.pdf')">Task</button>
     <button onclick="loadPage('wireframes.html')">Wireframes</button>
     <button onclick="loadPage('GTM+Metrics.pdf')">GTM + Metrics</button>
-  </div>
+  </div> -->
 
   <!-- DEFAULT CONTENT -->
-  <iframe id="contentFrame" src="nidhiphilonet.pdf"></iframe>
+  <!-- <iframe id="contentFrame" src="nidhiphilonet.pdf"></iframe>
 
   <script>
     function loadPage(page) {
@@ -48,5 +48,76 @@
     }
   </script>
 
+</body>
+</html>  -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Pages</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0e0e10;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 10px 16px;
+      background: #0e0e10;
+      border-bottom: 0.5px solid rgba(255,255,255,0.08);
+    }
+
+    .navbar button {
+      padding: 7px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #6b6966;
+      background: none;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: color 0.15s, background 0.15s;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .navbar button:hover {
+      color: #c9c6c1;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .navbar button.active {
+      color: #e87b3a;
+      background: rgba(232,123,58,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: calc(100vh - 53px);
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <button class="active" onclick="loadPage('nidhiphilonet.pdf', this)">Task</button>
+    <button onclick="loadPage('wireframes.html', this)">Wireframes</button>
+    <button onclick="loadPage('GTM+Metrics.pdf', this)">GTM + Metrics</button>
+  </div>
+
+  <iframe id="contentFrame" src="nidhiphilonet.pdf"></iframe>
+
+  <script>
+    function loadPage(page, btn) {
+      document.getElementById("contentFrame").src = page;
+      document.querySelectorAll('.navbar button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  </script>
 </body>
 </html>
