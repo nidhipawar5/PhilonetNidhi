@@ -1,6 +1,59 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="refresh" content="0; url=nidhi_philonet.pdf">
   </head>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Pages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .navbar {
+      display: flex;
+      background-color: #333;
+    }
+    .navbar button {
+      flex: 1;
+      padding: 14px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .navbar button:hover {
+      background-color: #575757;
+    }
+    iframe {
+      width: 100%;
+      height: 92vh;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <button onclick="loadPage('NidhiFilonet.pdf')">Task</button>
+    <button onclick="loadPage('wireframes.html')">Wireframes</button>
+    <!-- <button onclick="loadPage('gtm.pdf')">GTM</button> -->
+  </div>
+
+  <!-- DEFAULT CONTENT -->
+  <iframe id="contentFrame" src="NidhiFilonet.pdf"></iframe>
+
+  <script>
+    function loadPage(page) {
+      document.getElementById("contentFrame").src = page;
+    }
+  </script>
+
+</body>
 </html>
