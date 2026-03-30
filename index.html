@@ -64,80 +64,12 @@ iframe {
 </body>
 </html> -->
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="refresh" content="0; url=nidhi_philonet.pdf">
   </head>
-</html> -->
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Project Pages</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: #0e0e10;
-    }
-    .navbar {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 12px 20px;
-      background: #0e0e10;
-      border-bottom: 0.5px solid rgba(255,255,255,0.08);
-      position: relative;   /* ← added */
-      z-index: 10;          /* ← added */
-    }
-    .navbar button {
-      padding: 10px 22px;
-      font-size: 15px;
-      font-weight: 500;
-      color: #6b6966;
-      background: none;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: color 0.15s, background 0.15s;
-      letter-spacing: 0.01em;
-      white-space: nowrap;
-    }
-    .navbar button:hover {
-      color: #c9c6c1;
-      background: rgba(255,255,255,0.05);
-    }
-    .navbar button.active {
-      color: #e87b3a;
-      background: rgba(232,123,58,0.1);
-    }
-    iframe {
-      width: 100%;
-      height: calc(100vh - 65px);
-      border: none;
-      display: block;
-      position: relative;   /* ← added */
-      z-index: 1;           /* ← added */
-    }
-  </style>
-</head>
-<body>
-  <div class="navbar">
-    <button class="active" onclick="loadPage('nidhiphilonet.pdf', 'nidhi_philonet.pdf', this)">Task</button>
-    <button onclick="loadPage('wireframes.html', 'wireframes.html', this)">Wireframes</button>
-    <button onclick="loadPage('GTM+Metrics.pdf', 'GTM+Metrics.pdf', this)">GTM + Metrics</button>
-  </div>
-  <iframe id="contentFrame" src="nidhiphilonet.pdf"></iframe>
-  <script>
-    function loadPage(src, urlPath, btn) {
-      document.getElementById("contentFrame").src = src;
-      document.querySelectorAll('.navbar button').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      history.pushState(null, '', urlPath);
-    }
-
-    history.replaceState(null, '', 'nidhi_philonet.pdf');
-  </script>
-</body>
 </html>
+
+
+   
